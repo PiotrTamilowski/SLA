@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLA+</title>
+    <meta name="author" content="Piotr Tamiłowski">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <img id="settings" src="images/setting-icon.png" alt="">
+        <a href=""><h1>SLA<span>+</span></h1></a>
+        
+        <h2 id="error"></h2>
+        <form action="">
+            <fieldset>
+                <legend>Ticket Details</legend>
+                <label for="ticketNo">Ticket Number</label>
+                <input type="number" name="ticketNo" id="ticketNo">
+                <label for="project">Project</label>
+                <select name="project" id="project">
+                    <option value="">---</option>
+                    <option>Project1</option>
+                    <option>Project2</option>
+                    <option>Project3</option>
+                    <option>Project4</option>
+                </select>
+                <label for="ticketPriority">Priority</label>
+                <select name="ticketPriority" id="ticketPriority">
+                    <option value="">---</option>
+                    <option value="P1">P1</option>
+                    <option value="P2">P2</option>
+                    <option value="P3">P3</option>
+                    <option value="P4">P4</option>
+                </select>
+                <label for="ticketPriority">Created On</label>
+                <input type="datetime-local" name="date" id="ticketDateTime">
+                <button id="addButton">ADD</button>
+            </fieldset>
+        </form>
+        <div id="ticketsTable">
+            <table>
+                <thead>
+                    <th>Ticket Number</th>
+                    <th>Project</th>
+                    <th>Priority</th>
+                    <th>Created On</th>
+                    <th>Deadline</th>
+                    <th>Remaining Time</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>  
+    </div>
+    <div id="popup">
+        <div id="slaList">
+            <table>
+                <caption>Projects and SLA</caption>
+                <thead>
+                    <th>Project Name</th>
+                    <th>P1 deadline in hours</th>
+                    <th>P2 deadline in hours</th>
+                    <th>P3 deadline in hours</th>
+                    <th>P4 deadline in hours</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+                
+            </table>
+            <button id="addProject"><img src="images/add.png" alt=""></button>
+            <button id="saveSLA">Save</button>
+            <p>* If you want to delete, or modify a project from this list, first delete all tickets associated with this project</p>
+            <p>** All project names should be unique, otherwise the SLA will be overwritten</p>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
